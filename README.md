@@ -1,5 +1,5 @@
-# pokepedia
-Catalogo de Pokémon 
+# Pokepedia
+Catálogo de Pokémon 
 
 ¡Bienvenidos!
 
