@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Pokepedia"
+    }
+  },
+  "defaultProject": "Pokepedia",
+  "cli": {
+    "analytics": false
+  }
 }
