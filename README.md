@@ -1,4 +1,4 @@
-# pokepedia
+# Pokepedia
 Catalogo de Pokémon 
 
 ¡Bienvenidos!
