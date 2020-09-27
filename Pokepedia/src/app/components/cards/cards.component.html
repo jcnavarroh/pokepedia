@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container">
     <h1>Pokemon Detail</h1>
     <div class="row mt-5">
         <div class="col-md-4">
@@ -51,5 +51,17 @@
                 </a>
             </div>
         </div>
+    </div>
+    <h2>Versiones del pokemon</h2>
+    <div class="row mt-5">
+        <div class="col-lg-3 text-center" *ngFor="let version of versiones">
+            <div class="card">
+                <img [src]="version.url" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{version.nombre}}</h5>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
