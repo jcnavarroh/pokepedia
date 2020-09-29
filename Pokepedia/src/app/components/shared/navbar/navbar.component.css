@@ -1,0 +1,13 @@
+.titulo {
+    font-family: 'Comic-Sans';
+    font-size: 24px;
+    color:orange;
+}
+.boton-naranja{
+    color:#fff !important;
+    background-color: orange;
+    border-radius: 5px;
+    width: 70px;
+    height: 40px;
+    border:none; 
+}
