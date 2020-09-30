@@ -45,13 +45,13 @@ footer {
 
 .footer-container {
     width: 100%;
-    background: hsl(229, 29%, 30%);
+    background: #343a40;
     color: hsl(0, 27%, 92%);
 }
 
 .footer-main {
-    width: 98%;
-    max-width: 1000px;
+    width: 100%;
+    max-width: 80vw;
     margin: auto;
     padding: 50px 0;
     display: flex;
@@ -59,7 +59,7 @@ footer {
 }
 
 .footer-main .footer-columna {
-    width: calc(100% / 3);
+    width: calc(80vw / 3);
     text-align: justify;
 }
 
