@@ -5,6 +5,8 @@ import { NgModule } from '@angular/core';
 import { APP_ROUTING } from './app-routing.module';
 
 //Servicios
+import {HttpClientModule} from '@angular/common/http';
+import { PokeapiService } from './services/pokeapi.service';
 
 //Componentes
 import { AppComponent } from './app.component';
@@ -13,6 +15,8 @@ import { FooterComponent } from './components/shared/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { CardsComponent } from './components/cards/cards.component';
 import { SearchComponent } from './components/search/search.component';
+import { CapitalizadoPipe } from './pipes/capitalizado.pipe';
+
 
 @NgModule({
   declarations: [
@@ -21,13 +25,17 @@ import { SearchComponent } from './components/search/search.component';
     FooterComponent,
     HomeComponent,
     CardsComponent,
-    SearchComponent
+    SearchComponent,
+    CapitalizadoPipe
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     APP_ROUTING
   ],
-  providers: [],
+  providers: [
+    PokeapiService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

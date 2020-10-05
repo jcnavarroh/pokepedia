@@ -6,15 +6,21 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
     z-index: 0;
     padding: 0;
 }
 
 .contentBox {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .card-title-home {
     padding-top: .75rem;
+}
+
+.card-img,
+.card-img-top {
+    padding: 5%;
 }
