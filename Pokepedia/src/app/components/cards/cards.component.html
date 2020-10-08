@@ -1,21 +1,31 @@
 <div class="container">
-    <h1>Pokemon Detail</h1>
+    <section>
+    <h1 class="text-center mt-3">Pokemon Detail</h1>
+    <hr class="horizontal-line-title">
     <div class="row mt-5">
         <div class="col-md-4">
-            <p>Información Principal</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio ad repudiandae amet numquam, nam tempore nesciunt porro veritatis, maiores tempora alias. Fugit culpa pariatur mollitia suscipit quasi omnis illo corrupti? </p>
+            <p class="section1-title">Información Principal</p>
+            <p><strong>Name: </strong> Lorem ipsum</p>
+            <p><strong>Base experience: </strong>0</p>
+            <p><strong>Height: </strong>0</p>
+            <p><strong>Weight: </strong>0</p>
         </div>
         <div class="col-md-4">
             <div class="card">
                 <img src="https://visualpharm.com/assets/494/Portrait-595b40b75ba036ed117d834e.svg" alt="pokemon">
             </div>
         </div>
-        <div class="col-md-4">
-            <p>Habilidades</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat minima illo quia, placeat asperiores repellendus nostrum? Facilis voluptatem a eos cum aut odit accusamus. Veniam cupiditate asperiores repudiandae inventore consequuntur.</p>
+        <div class="col-md-4" style="padding-left: 5%;">
+            <p class="section1-title">Habilidades</p>
+            <p>Lorem ipsum</p>
+            <p>Lorem ipsum</p>
+            <p>Lorem ipsum</p>
         </div>
     </div>
-    <h2>Carousel de Sprites</h2>
+</section>
+    <section>
+    <h2 class="mt-5">Carousel de Sprites</h2>
+    <hr class="horizontal-line-subtitle1">
     <div class="row mt-5">
         <div class="col-md-4 offset-md-4">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -46,10 +56,13 @@
             </div>
         </div>
     </div>
-    <h2>Versiones del pokemon</h2>
-    <div class="row mt-5">
+</section>
+    <section>
+    <h2 class="mt-5">Versiones del pokemon</h2>
+    <hr class="horizontal-line-subtitle2">
+    <div class="row">
         <div class="col-lg-3 text-center" *ngFor="let version of versiones">
-            <div class="card">
+            <div class="card card-version my-4">
                 <img [src]="version.url" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">{{version.nombre}}</h5>
@@ -58,4 +71,5 @@
         </div>
 
     </div>
+</section>
 </div>
