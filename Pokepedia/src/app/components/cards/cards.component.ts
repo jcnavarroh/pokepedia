@@ -12,7 +12,7 @@ export class CardsComponent implements OnInit {
 
   pokemonId: number;
   pokemon: Pokemon = {
-    name: '', base_experience: 0, height: 0, weight: 0, sprites: {}, abilities: [], versions: []
+    name: '', base_experience: 0, height: 0, weight: 0, sprites: {}, abilities: []
   };
 
   versiones = [{ nombre: 'version 1', url: 'https://www.iconfinder.com/data/icons/basic-ui-6/40/Asset_12-512.png' },
