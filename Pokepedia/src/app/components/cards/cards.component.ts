@@ -15,6 +15,8 @@ export class CardsComponent implements OnInit {
     name: '', base_experience: 0, height: 0, weight: 0, sprites: {}, abilities: [], front_photo: ''
   };
 
+  habilidades = []
+
   versiones = [{ nombre: 'version 1', url: 'https://www.iconfinder.com/data/icons/basic-ui-6/40/Asset_12-512.png' },
   { nombre: 'version 2', url: 'https://www.iconfinder.com/data/icons/basic-ui-6/40/Asset_12-512.png' },
   { nombre: 'version 3', url: 'https://www.iconfinder.com/data/icons/basic-ui-6/40/Asset_12-512.png' },
@@ -42,6 +44,10 @@ export class CardsComponent implements OnInit {
 
       this.pokemon.front_photo = response.sprites.front_default
       console.log("Pokemon data => ", this.pokemon);
+
+      this.habilidades = response.abilities.map((value) => {
+        return value['ability'];
+      });
 
     }, error => {
       console.log(error);
