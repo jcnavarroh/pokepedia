@@ -12,7 +12,7 @@ export class CardsComponent implements OnInit {
 
   pokemonId: number;
   pokemon: Pokemon = {
-    name: '', base_experience: 0, height: 0, weight: 0, sprites: {}, abilities: []
+    name: '', base_experience: 0, height: 0, weight: 0, sprites: {}, abilities: [], front_photo: ''
   };
 
   versiones = [{ nombre: 'version 1', url: 'https://www.iconfinder.com/data/icons/basic-ui-6/40/Asset_12-512.png' },
@@ -40,6 +40,7 @@ export class CardsComponent implements OnInit {
         this.pokemon[key] = response[key]
       });
 
+      this.pokemon.front_photo = response.sprites.front_default
       console.log("Pokemon data => ", this.pokemon);
 
     }, error => {

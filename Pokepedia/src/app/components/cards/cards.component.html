@@ -5,21 +5,20 @@
     <div class="row mt-5">
         <div class="col-md-4">
             <p class="section1-title">Información Principal</p>
-            <p><strong>Name: </strong> Lorem ipsum</p>
-            <p><strong>Base experience: </strong>0</p>
-            <p><strong>Height: </strong>0</p>
-            <p><strong>Weight: </strong>0</p>
+            <p><strong>Name: </strong> {{pokemon.name}}</p>
+            <p><strong>Base experience: </strong>{{pokemon.base_experience}}</p>
+            <p><strong>Height: </strong>{{pokemon.height}}</p>
+            <p><strong>Weight: </strong>{{pokemon.weight}}</p>
         </div>
         <div class="col-md-4">
             <div class="card">
-                <img src="https://visualpharm.com/assets/494/Portrait-595b40b75ba036ed117d834e.svg" alt="pokemon">
+                <img [src]="pokemon.front_photo" width="60%" alt="pokemon" style="margin-left: 20%;">
             </div>
         </div>
         <div class="col-md-4" style="padding-left: 5%;">
             <p class="section1-title">Habilidades</p>
-            <p>Lorem ipsum</p>
-            <p>Lorem ipsum</p>
-            <p>Lorem ipsum</p>
+            <p *ngFor="let a of pokemon.abilities">{{a.name}}</p>
+            
         </div>
     </div>
 </section>

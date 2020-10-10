@@ -5,5 +5,5 @@ export class Pokemon {
     weight: number;
     abilities: [];
     sprites: {};
-
+    front_photo: string
 }
