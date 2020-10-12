@@ -58,9 +58,9 @@
         <h2 class="mt-5">Versiones del pokemon</h2>
         <hr class="horizontal-line-subtitle2">
         <div class="row">
-            <div class="col-lg-3 text-center" *ngFor="let version of versiones">
+            <div class="col-lg-2 text-center" *ngFor="let version of versiones">
                 <div class="card card-version my-4">
-                    <img [src]="version.url" class="card-img-top" alt="...">
+                    <img [src]="version" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">{{version.nombre}}</h5>
                     </div>

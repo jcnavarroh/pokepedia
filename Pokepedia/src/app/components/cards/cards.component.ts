@@ -17,7 +17,8 @@ export class CardsComponent implements OnInit {
 
   habilidades = []
   sprites = []
-
+  versiones = []
+  /*
   versiones = [{ nombre: 'version 1', url: 'https://www.iconfinder.com/data/icons/basic-ui-6/40/Asset_12-512.png' },
   { nombre: 'version 2', url: 'https://www.iconfinder.com/data/icons/basic-ui-6/40/Asset_12-512.png' },
   { nombre: 'version 3', url: 'https://www.iconfinder.com/data/icons/basic-ui-6/40/Asset_12-512.png' },
@@ -25,7 +26,7 @@ export class CardsComponent implements OnInit {
   { nombre: 'version 5', url: 'https://www.iconfinder.com/data/icons/basic-ui-6/40/Asset_12-512.png' },
   { nombre: 'version 6', url: 'https://www.iconfinder.com/data/icons/basic-ui-6/40/Asset_12-512.png' },
   { nombre: 'version 7', url: 'https://www.iconfinder.com/data/icons/basic-ui-6/40/Asset_12-512.png' }]
-
+  */
   constructor(private pokeApiService: PokeapiService, private activateRoute: ActivatedRoute) {
 
   }
@@ -38,6 +39,8 @@ export class CardsComponent implements OnInit {
   cargarPokemon() {
     this.pokeApiService.getPokemonData(this.pokemonId).subscribe((response: any) => {
       console.log("Respuesta Api => ", response);
+      var generations = []
+      var generationsKeyValue = []
 
       Object.keys(this.pokemon).forEach((key) => {
         this.pokemon[key] = response[key]
@@ -55,7 +58,25 @@ export class CardsComponent implements OnInit {
         this.sprites.push(value)
       }
 
-      console.log(this.sprites)
+      for (const [key, value] of Object.entries(response.sprites.versions)) {
+        generations.push(value)
+      }
+
+      generations.forEach(gen => {
+        for (const [key, value] of Object.entries(gen)) {
+          generationsKeyValue.push(value)
+        }
+      })
+
+      generationsKeyValue.forEach(gen => {
+        for (const [key, value] of Object.entries(gen)) {
+          if (value != null) {
+            this.versiones.push(value)
+          }
+        }
+      })
+
+      console.log(this.versiones)
     }, error => {
       console.log(error);
     });
