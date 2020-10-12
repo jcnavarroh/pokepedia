@@ -16,6 +16,7 @@ export class CardsComponent implements OnInit {
   };
 
   habilidades = []
+  sprites = []
 
   versiones = [{ nombre: 'version 1', url: 'https://www.iconfinder.com/data/icons/basic-ui-6/40/Asset_12-512.png' },
   { nombre: 'version 2', url: 'https://www.iconfinder.com/data/icons/basic-ui-6/40/Asset_12-512.png' },
@@ -49,6 +50,12 @@ export class CardsComponent implements OnInit {
         return value['ability'];
       });
 
+
+      for (const [key, value] of Object.entries(response.sprites)) {
+        this.sprites.push(value)
+      }
+
+      console.log(this.sprites)
     }, error => {
       console.log(error);
     });

@@ -35,17 +35,12 @@
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="https://icon-library.com/images/pikachu-icon/pikachu-icon-12.jpg" class="w-100"
-                                alt="...">
+                            <img [src]="pokemon.front_photo" class="w-100" alt="...">
                         </div>
-                        <div class="carousel-item">
-                            <img src="https://www.uokpl.rs/fpng/f/206-2062551_liked-like-share.png" class="w-100"
-                                alt="...">
+                        <div class="carousel-item" *ngFor="let s of sprites">
+                            <img [src]="s" class="w-100" alt="...">
                         </div>
-                        <div class="carousel-item">
-                            <img src="https://i.pinimg.com/originals/02/ba/9e/02ba9e929cbdae933b8202e49068a959.jpg"
-                                class="w-100" alt="...">
-                        </div>
+
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
