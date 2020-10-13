@@ -1,25 +1,34 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {​​ Component, OnInit }​​ from '@angular/core';
+import {​​ PokeapiService }​​ from 'src/app/services/pokeapi.service';
+import {​​ ActivatedRoute }​​ from '@angular/router';
 
-import { SearchComponent } from './search.component';
+@Component({​​
+  selector: 'app-search',
+  templateUrl: './search.component.html',
+  styleUrls: ['./search.component.css']
+}​​)
 
-describe('SearchComponent', () => {
-  let component: SearchComponent;
-  let fixture: ComponentFixture<SearchComponent>;
+export class SearchComponent implements OnInit {​​
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ SearchComponent ]
-    })
-    .compileComponents();
-  });
+  pokemones = [];
+  filterPokemon = [];
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(SearchComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+  constructor( private pokeapi: PokeapiService,
+               public route:ActivatedRoute ) {​​
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+    this.route.params.subscribe( params => {​​
+      this.filterPokemon [0] = params;
+    }​​)
+
+    this.pokeapi.getPokemonList().subscribe((data: any) => {​​
+      console.log (data.results);
+      this.pokemones = data.results;
+
+    }​​);
+  }​​
+
+  ngOnInit(): void {​​
+
+  }​​
+
+}​​
