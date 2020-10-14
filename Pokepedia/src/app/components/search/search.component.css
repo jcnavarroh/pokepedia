@@ -1,9 +1,9 @@
-.container-search {​​
+.container-search {
     min-height: 71vh;
     margin: 0;
-}​​
+}
 
-#background2 {​​
+#background2 {
     background: url(/assets/images/background_2.JPG);
     height: 100%;
     min-height: 96vh;
@@ -14,18 +14,18 @@
     background-attachment: fixed;
     z-index: 0;
     padding: 0;
-}​​
+}
 
-.contentBox {​​
+.contentBox {
     padding-top: 2rem;
     padding-bottom: 2rem;
-}​​
+}
 
-.card-title-home {​​
+.card-title-home {
     padding-top: .75rem;
-}​​
+}
 
 .card-img,
-.card-img-top {​​
+.card-img-top {
     padding: 5%;
-}​​
+}
